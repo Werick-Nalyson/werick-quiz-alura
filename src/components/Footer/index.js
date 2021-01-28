@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 
 // src/components/Footer/index.js
@@ -23,9 +24,9 @@ const FooterWrapper = styled.footer`
       text-decoration: underline;
     }
   }
-`;
+`
 
-export default function Footer(props) {
+export default function Footer (props) {
   return (
     // eslint-disable-next-line react/jsx-props-no-spreading
     <FooterWrapper {...props}>
@@ -39,5 +40,5 @@ export default function Footer(props) {
         </a>
       </p>
     </FooterWrapper>
-  );
+  )
 }

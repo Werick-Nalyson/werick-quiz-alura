@@ -18,7 +18,7 @@ const Widget = styled.div`
     font-weight: 400;
     line-height: 1;
   }
-`;
+`
 
 Widget.Header = styled.header`
   display: flex;
@@ -30,7 +30,7 @@ Widget.Header = styled.header`
   * {
     margin: 0;
   }
-`;
+`
 
 Widget.Content = styled.div`
   padding: 24px 32px 32px 32px;
@@ -40,10 +40,31 @@ Widget.Content = styled.div`
   & > *:last-child {
     margin-bottom: 0;
   }
+
   ul {
     list-style: none;
     padding: 0;
   }
-`;
 
-export default Widget;
+  form {
+   input {
+     width: 100%;
+     padding: 8px 5px 8px 5px;
+     outline: none;
+   }
+
+   button {
+     width: 100%;
+     margin-top: 5px;
+     outline: none;
+     padding: 6px 0px 6px 0px;
+     border: none;
+     color: ${({ theme }) => theme.colors.contrastText};
+     background-color: ${({ theme }) => theme.colors.secondary};
+     font-weight: bold;
+     cursor: pointer;
+   }
+  }
+`
+
+export default Widget

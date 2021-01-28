@@ -1,7 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
 
 const DivLogo = styled.div`
   display: flex;
@@ -21,9 +20,9 @@ const ImgLogo = styled.img`
   @media screen and (max-width: 500px) {
     margin: 0;
   }
-`;
+`
 
-export default function QuizLogo() {
+export default function QuizLogo () {
   return (
     <DivLogo>
       <ImgLogo className="logo" src="https://ik.imagekit.io/wericknalyson/Images_portfolio/logo_x5cc44G_h.png" alt="" />
@@ -33,5 +32,5 @@ export default function QuizLogo() {
         </strong>
       </span>
     </DivLogo>
-  );
+  )
 }
