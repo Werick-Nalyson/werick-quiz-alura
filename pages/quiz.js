@@ -5,6 +5,7 @@ import QuizLogo from '../src/components/QuizLogo'
 import QuizBackground from '../src/components/QuizBackground'
 import QuizContainer from '../src/components/QuizContainer'
 import Button from '../src/components/Button'
+import propTypes from 'prop-types'
 
 function LoadingWidget () {
   return (
@@ -14,7 +15,9 @@ function LoadingWidget () {
       </Widget.Header>
 
       <Widget.Content>
-        [Desafio do Loading]
+        <div className="loading">
+          <img src="https://www.bluechipexterminating.com/wp-content/uploads/2020/02/loading-gif-png-5.gif" width="50px" alt="" />
+        </div>
       </Widget.Content>
     </Widget>
   )
@@ -27,10 +30,10 @@ function QuestionWidget ({
   onSubmit
 }) {
   const questionId = `question__${questionIndex}`
+
   return (
     <Widget>
       <Widget.Header>
-        {/* <BackLinkArrow href="/" /> */}
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
@@ -46,16 +49,12 @@ function QuestionWidget ({
         src={question.image}
       />
       <Widget.Content>
-        <h2>
-          {question.title}
-        </h2>
-        <p>
-          {question.description}
-        </p>
+        <h2>{question.title}</h2>
+        <p>{question.description}</p>
 
         <form
-          onSubmit={(infosDoEvento) => {
-            infosDoEvento.preventDefault()
+          onSubmit={(event) => {
+            event.preventDefault()
             onSubmit()
           }}
         >
@@ -63,12 +62,12 @@ function QuestionWidget ({
             const alternativeId = `alternative__${alternativeIndex}`
             return (
               <Widget.Topic
-                key={alternative}
+                key={alternativeId}
                 as="label"
                 htmlFor={alternativeId}
               >
                 <input
-                  // style={{ display: 'none' }}
+                  style={{ display: 'none' }}
                   id={alternativeId}
                   name={questionId}
                   type="radio"
@@ -78,9 +77,6 @@ function QuestionWidget ({
             )
           })}
 
-          {/* <pre>
-            {JSON.stringify(question, null, 4)}
-          </pre> */}
           <Button type="submit">
             Confirmar
           </Button>
@@ -95,6 +91,7 @@ const screenStates = {
   LOADING: 'LOADING',
   RESULT: 'RESULT'
 }
+
 export default function QuizPage () {
   const [screenState, setScreenState] = React.useState(screenStates.LOADING)
   const totalQuestions = db.questions.length
@@ -103,9 +100,8 @@ export default function QuizPage () {
   const question = db.questions[questionIndex]
 
   React.useEffect(() => {
-    setTimeout(() => {
-      setScreenState(screenStates.QUIZ)
-    }, 1 * 1000)
+    if (screenState === 'QUIZ') return
+    return setScreenState(screenStates.QUIZ)
   }, [])
 
   function handleSubmitQuiz () {
@@ -136,4 +132,11 @@ export default function QuizPage () {
       </QuizContainer>
     </QuizBackground>
   )
+}
+
+QuestionWidget.propTypes = {
+  question: propTypes.object.isRequired,
+  questionIndex: propTypes.number.isRequired,
+  totalQuestions: propTypes.number.isRequired,
+  onSubmit: propTypes.func.isRequired
 }

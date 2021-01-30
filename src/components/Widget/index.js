@@ -34,11 +34,16 @@ Widget.Header = styled.header`
 
 Widget.Content = styled.div`
   padding: 24px 32px 32px 32px;
+  
   & > *:first-child {
     margin-top: 0;
   }
   & > *:last-child {
     margin-bottom: 0;
+  }
+
+  div.loading {
+    text-align: center;
   }
 
   ul {
@@ -59,10 +64,10 @@ Widget.Topic = styled.a`
   transition: .3s;
   display: block;
   
-  &:hover,
-  &:focus {
+  &:hover{
     opacity: .5;
   }
+
 `
 
 export default Widget
