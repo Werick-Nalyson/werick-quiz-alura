@@ -1,6 +1,6 @@
 {
   "bg": "https://img5.goodfon.com/wallpaper/nbig/d/c4/landscape-mountains-trees-nature-forest-birds-sky-man-silhou.jpg",
-  "title": "Conhecimentos em CSS",
+  "title": "Quiz CSS da Alura",
   "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
   "questions": [
     {
@@ -21,8 +21,8 @@
       "description": "Faz tempo em haha",
       "answer": 0,
       "alternatives": [
-        "background: linear-gradient(#e66465, #9198e5);",
-        "background: gradient(#e66465, #9198e5);"
+         "background: linear-gradient(#e66465, #9198e5);",
+         "background: gradient(#e66465, #9198e5);"
       ]
     }
   ],

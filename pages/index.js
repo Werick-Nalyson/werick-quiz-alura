@@ -9,6 +9,9 @@ import QuizBackground from '../src/components/QuizBackground'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
 
+import Input from '../src/components/Input'
+import Button from '../src/components/Button'
+
 export const QuizContainer = styled.div`
   width: 100%;
   max-width: 350px;
@@ -40,15 +43,16 @@ export default function Home () {
             <h1>{db.title}</h1>
           </Widget.Header>
           <Widget.Content>
-            <form name="form-name-user" onSubmit={handleSubmit}>
-              <input
+            <form onSubmit={handleSubmit}>
+              <Input
+                name="name-user"
                 placeholder="Seu nome"
                 value={name}
                 onChange={e => setName(e.target.value)}
               />
-              <button type="submit">
+              <Button type="submit" disabled={!name.length}>
                 Jogar
-              </button>
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
