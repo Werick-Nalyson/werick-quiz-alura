@@ -27,7 +27,7 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const theme = db.theme
+const { theme } = db
 
 export default function App ({ Component, pageProps }) {
   return (

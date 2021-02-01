@@ -1,33 +1,33 @@
 {
-  "bg": "https://img5.goodfon.com/wallpaper/nbig/d/c4/landscape-mountains-trees-nature-forest-birds-sky-man-silhou.jpg",
-  "title": "Quiz CSS da Alura",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "bg": "https://blogdoneozinho.com.br/wp-content/uploads/2020/07/vantagens-de-aprender-a-programar.jpg",
+  "title": "Quiz: lógica de programação",
+  "description": "Teste os seus conhecimentos sobre Lógica de programação",
   "questions": [
     {
-      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-      "title": "Como fazer um seletor por id via CSS?",
-      "description": "Essa é pra aquecer",
-      "answer": 2,
+      "image": "https://i0.wp.com/www.deviante.com.br/wp-content/uploads/2019/04/deviante-algoritmo.png?fit=1000%2C350",
+      "title": "Como podemos definir um algorítomo?",
+      "description": "",
+      "answer": 0,
       "alternatives": [
-        ".elemento",
-        "*elemento",
-        "#elemento",
-        "%elemento"
+        "Conjunto das regras e procedimentos lógicos perfeitamente definidos que levam à solução de um problema em um número finito de etapas.",
+        "Conjunto de regras não tão importantes para quem deseja estudar informática.",
+        "Conjunto de ideias lógicas e ilógicas para se resolver um determiado problema."
       ]
     },
     {
-      "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-      "title": "Como fazer um background gradiente com css?",
-      "description": "Faz tempo em haha",
+      "image": "https://i.pinimg.com/474x/51/64/85/516485e5b4870c87b4f27c998fbbd72a.jpg",
+      "title": "Qual a maneira mais correta de se vestir para ir à escola?",
+      "description": "Atente-se no passo a passo que mais se adequa.",
       "answer": 0,
       "alternatives": [
-         "background: linear-gradient(#e66465, #9198e5);",
-         "background: gradient(#e66465, #9198e5);"
+         "enxugar-se - vestir roupas de baixo - vestir calça - calçar as meias - calçar o tênis - vestir farda",
+         "enxugar-se - vestir roupas de baixo - calçar as meias - calçar o tênis - vestir calça - vestir farda",
+         "enxugar-se - vestir roupas de baixo - calçar o tênis - calçar as meias - vestir calça - vestir farda"
       ]
     }
   ],
   "external": [
-    ""
+    "https://aluraquiz-css.omariosouto.vercel.app/"
   ],
   "theme": {
     "colors": {
